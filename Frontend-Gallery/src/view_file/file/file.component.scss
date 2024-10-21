@@ -1,0 +1,68 @@
+.gridPhoto{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
+  flex-wrap: wrap;
+  gap:2vw;
+}
+.gridDirector{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+}
+:host ::ng-deep  .p-button.but {
+  height:10vh !important;  //your font size here
+  width:10vh !important;
+}
+
+:host ::ng-deep  .p-button.but  .pi{
+  font-size: 10vh !important; /* Ajustează dimensiunea iconiței */
+}
+
+.content{
+  margin: 10px
+}
+:host ::ng-deep .p-toast {
+  max-width: 90vw;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.back-but{
+  margin-top: 20px;  /* margine sus */
+  margin-bottom: 20px;  /* margine sus */
+}
+.bigImage img {
+    width: 100%;
+    height: 100%; /* Asigură că imaginea se extinde pe toată înălțimea cardului */
+    object-fit: cover; /* Încadrează imaginea fără a o deforma, decupând dacă este necesar */
+   border-radius: 15px; /* Colțuri rotunjite */
+}
+.button-container {
+  width: 100%; /* Asigură că butoanele ocupă întreaga lățime */
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between; /* Un buton la stânga, altul la dreapta */
+  margin-top: 10px; /* Spațiu între imagine și butoane */
+  margin-left: 30px; /* Spațiu între imagine și butoane */
+}
+
+.button-container p-button {
+  flex: 1;
+}
+:host ::ng-deep .p-confirm-dialog-accept {
+  background-color: green !important; /* Culoarea pentru butonul Yes */
+  border: none !important;
+  color: white !important;
+}
+
+:host ::ng-deep .p-confirm-dialog-reject {
+  background-color: red !important; /* Culoarea pentru butonul No */
+  border: none !important;
+  color: white !important;
+}
+
+

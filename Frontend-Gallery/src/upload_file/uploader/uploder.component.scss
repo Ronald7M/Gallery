@@ -1,0 +1,60 @@
+:host ::ng-deep .p-fileupload .p-button {
+  background-color: #4CAF50; /* Culoare de fundal verde */
+  color: white; /* Culoare text albă */
+  border: none; /* Fără bordură */
+  border-radius: 4px; /* Colțuri rotunjite */
+  padding: 10px 20px; /* Spațiere interioară */
+  font-size: 16px; /* Mărimea fontului */
+}
+
+:host ::ng-deep .p-fileupload .p-fileupload-buttonbar {
+  background: #f9fafb;
+  padding: 1.25rem;
+  border: 1px solid #e5e7eb;
+  color: #374151;
+  border-bottom: 0 none;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+
+  display: flex;
+  justify-content: center; /* Centrează butoanele pe orizontală */
+  align-items: center; /* Centrează butoanele pe verticală */
+  flex-direction: column; /* Asigură-te că butoanele sunt pe orizontală */
+  gap: 10px; /* Spațiu între butoane */
+  padding: 20px; /* Spațiu în jurul butoanelor */
+}
+
+:host ::ng-deep p-fileupload .p-button.p-button-outlined.p-button-upload  {
+  background-color: #0f2ce4; /* Culoare de fundal verde */
+  color: white; /* Culoare text albă */
+  border: 2px solid #4CAF50; /* Bordură verde */
+}
+
+:host ::ng-deep .p-fileupload .p-button.p-button-icon-only {
+  background-color: red; /* Schimbă culoarea de fundal */
+  color: white; /* Schimbă culoarea textului */
+}
+
+:host ::ng-deep .p-fileupload .p-fileupload-filename {
+  display: none;
+}
+:host ::ng-deep .p-toast {
+  max-width: 90vw;
+  padding: 10px;
+  font-size: 14px;
+}
+.choseDirector{
+  margin-top:10vh;
+  height:10vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.choseDirector.select{
+  margin-top:40vh;
+  height:10vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+

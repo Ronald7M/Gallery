@@ -1,0 +1,28 @@
+.image img {
+  width: 20vw;
+  height: 20vw;
+  object-fit: cover;         /* Ajustează imaginea pentru a umple containerul */
+  border-radius: 10px;        /* Imagine rotundă */
+  margin-bottom: 15px;       /* Spațiu între imagine și text */
+}
+
+.large-text {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;        /* Text centrat */
+}
+.card{
+
+  display: flex;
+  flex-direction: column;    /* Elemente afișate unul sub altul */
+  align-items: center;       /* Centrat pe orizontală */
+  padding: 20px;
+  background-color: #f5f5f5; /* Culoare fundal card */
+  border-radius: 80vw;        /* Colțuri rotunjite */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Umbra cardului */
+  width: 80vw;              /* Lățimea cardului */
+  margin: 20px auto;         /* Centrare pe pagină */
+
+}
+

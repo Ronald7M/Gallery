@@ -1,0 +1,21 @@
+
+<div class="choseDirector" [ngClass]="{'select': selectedDirector===undefined}">
+<p-dropdown [options]="files" [(ngModel)]="selectedDirector" optionLabel="name"
+            placeholder="{{'upload.choseDirector'|translate}}" ></p-dropdown>
+</div>
+@if(selectedDirector!=undefined){
+  <div class="card flex justify-content-center">
+    <p-toast />
+    <p-fileUpload
+      name="demo"
+      [url]="getUrl()"
+      (onUpload)="onUpload($event)"
+      (onError)="onError($event)"
+      [multiple]="true"
+      (onSelect)="onSelect($event)"
+      maxFileSize="30000000"
+      accept="image/*" >
+    </p-fileUpload>
+  </div>
+}
+

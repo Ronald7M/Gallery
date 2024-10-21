@@ -1,0 +1,68 @@
+@if (!step){
+<div class="gridDirector" >
+  @for ( director of directors; track $index){
+    <card-director [director]="director" (click)="clickSelectedDirector(director)" ></card-director>
+  }
+  <div (click)="clickNewDirector()">
+    <img src="newFolder.png"  alt="Folder" style="width: 20vw; height: 20vw;">
+  </div>
+  </div>
+}
+@if(step){
+  <div class="back-but">
+  <p-button icon="pi pi-angle-left" [rounded]="true" [text]="true" [raised]="true" (onClick)="back()" size="large"/>
+  </div>
+<div class="gridPhoto">
+@for ( image of images; track $index){
+  <card-image [image]="image" (messageEvent)="receiveMessage($event)" ></card-image>
+}
+</div>
+
+  <div class="card flex justify-content-center">
+    <p-paginator
+      [first]="first"
+      [rows]="rows"
+      [totalRecords]="totalRecords"
+      (onPageChange)="onPageChange($event)"
+      [pageLinkSize]="1"></p-paginator>
+
+  </div>
+}
+
+
+
+
+<div class="card flex justify-content-center">
+  <p-dialog header="{{'dir.newDirector'|translate}}" [modal]="true" [(visible)]="showNewDirector" [style]="{ width: '90vw' }">
+    <div class="flex align-items-center gap-3 mb-3">
+      <div class="content">
+      <label for="dir" class="font-semibold w-6rem">{{'dir.directorName'|translate}}</label>
+      <input pInputText [(ngModel)]="dirName" id="dir" class="p-inputtext flex-auto" autocomplete="off" />
+    </div>
+    <div class="flex justify-content-end gap-2">
+    <p-button label="{{'dir.create' | translate}}" [rounded]="true" severity="success" (onClick)="createDir()" />
+    </div>
+    </div>
+  </p-dialog>
+</div>
+@if (imageClick!=undefined){
+  <div class="card flex justify-content-center">
+    <p-dialog header="Photo" [modal]="true" [(visible)]="display" [style]="{ width: '90vw' }">
+      <div class="bigImage">
+      <img [src]="'data:image/jpeg;base64,' + imageClick.base64Data" alt="{{ imageClick.filename }}" />
+        <div class="button-container">
+          <p-button label="Download" severity="success" (onClick)="clickDownload()" />
+          <p-button label="Delete" severity="danger" (onClick)="confirm()"/>
+        </div>
+      </div>
+
+    </p-dialog>
+  </div>
+}
+
+<div class="card flex justify-content-center gap-2">
+  <p-confirmDialog [style]="{ width: '70vw' }" />
+</div>
+
+<p-toast />
+

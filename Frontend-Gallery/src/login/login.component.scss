@@ -1,0 +1,37 @@
+.login{
+  margin-top:25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  gap: 1vh;
+}
+
+.component{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 1vh;
+}
+
+.component label {
+  font-size: 1.2rem; /* Mărește dimensiunea fontului */
+  margin-bottom: 0.5rem; /* Spațiu sub etichetă */
+}
+
+/* Stilizează câmpurile de input */
+.component input {
+  padding: 8px; /* Mărește spațiul interior al input-ului */
+  font-size: 1rem; /* Mărește dimensiunea fontului */
+  border: 1px solid #ccc; /* Culoarea și grosimea bordurii */
+  border-radius: 4px; /* Colțuri rotunjite */
+}
+
+:host ::ng-deep .p-toast {
+  max-width: 90vw;
+  padding: 10px;
+  font-size: 14px;
+}
